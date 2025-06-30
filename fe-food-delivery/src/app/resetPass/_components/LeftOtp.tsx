@@ -35,9 +35,12 @@ export const LeftOtp = ({
   const onClick = async () => {
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:8000/reset", {
-        email: values.email,
-      });
+      const response = await axios.post(
+        "https://fooddelivery-5hmy.onrender.com/reset",
+        {
+          email: values.email,
+        }
+      );
       setLoading(false);
     } catch (err: any) {
       alert(err.response.data.message);

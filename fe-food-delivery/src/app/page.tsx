@@ -4,7 +4,9 @@ import { HomeMenu } from "./_components/HomeMenu";
 import axios from "axios";
 
 export default async function Home() {
-  const { data } = await axios.get("http://localhost:8000/foods");
+  const { data } = await axios.get(
+    "https://fooddelivery-5hmy.onrender.com/foods"
+  );
 
   return (
     <div>

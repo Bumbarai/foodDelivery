@@ -29,9 +29,12 @@ export const LeftReset = ({
   const isButtonDisabled = !errors.email && values.email;
   const onClick = async () => {
     try {
-      const response = await axios.post("http://localhost:8000/reset", {
-        email: values.email,
-      });
+      const response = await axios.post(
+        "https://fooddelivery-5hmy.onrender.com/reset",
+        {
+          email: values.email,
+        }
+      );
     } catch (err: any) {
       alert(err.response.data.message);
     }

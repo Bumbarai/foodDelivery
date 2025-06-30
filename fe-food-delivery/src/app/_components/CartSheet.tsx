@@ -60,7 +60,7 @@ export const CartSheet = () => {
     }));
 
     await axios.post(
-      "http://localhost:8000/createOrder",
+      "https://fooddelivery-5hmy.onrender.com/createOrder",
       {
         totalPrice: totalPrice,
         foodOrderItems: readyData,

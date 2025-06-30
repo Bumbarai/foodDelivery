@@ -21,11 +21,14 @@ export const Orders = () => {
     const token = localStorage.getItem("token");
 
     const myOrders = async () => {
-      const orderData = await axios.get("http://localhost:8000/getOrders", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      });
+      const orderData = await axios.get(
+        "https://fooddelivery-5hmy.onrender.com/getOrders",
+        {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        }
+      );
 
       setOrders(orderData.data.orders);
     };
